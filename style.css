@@ -1,0 +1,257 @@
+.body{
+    background-color: rgb(241, 227, 230);
+}
+.container{
+    background-color: pink;
+    border-radius: 30px;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    margin-top: 80px;
+    width:  650px;
+    height: 500px;
+}
+.todo{
+    color: rgb(182, 93, 107);
+}
+.dark{
+    position: relative;
+    bottom: 8px;
+    left: 10px;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+   }
+   .box1{
+    background-color: pink;
+    border: none;
+    height: 30px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+    
+   }
+   .box1:hover{
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+   }
+   .box4:hover{
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+   }
+
+   .box2{
+    width: 100px;
+    height: 28px;
+    border-radius: 5px;
+    border-color: none;
+   }
+   .box3{
+    width: 90px;
+    height: 28px;
+    border-radius: 5px;
+    border-color: 0;
+
+   }
+   .box4{
+    background-color: pink;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .box5{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    transition: all 0.3s ease-in-out;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   
+   }
+   .box5::placeholder{
+    color: white;
+    position: relative;
+    left:60px;
+    
+    }
+   .box6::placeholder{
+    color: white;
+    position: relative;
+    left: 50px;
+    
+
+   }
+   .box7::placeholder{
+    color: white;
+    position: relative;
+    left: 45px;
+    
+
+   }
+   .box8::placeholder{
+    color: white;
+    position: relative;
+    left: 35px;
+   }
+   .box9::placeholder{
+    color: white;
+    position: relative;
+    left: 70px;
+   }
+   .box10::placeholder{
+    color: white;
+    position: relative;
+    left: 80px;}
+
+    .box11::placeholder{
+    color: white;
+    position: relative;
+    left: 70px;}
+
+    .box12::placeholder{
+    color: white;
+    position: relative;
+    left: 80px;}
+
+   .box5:hover{
+    transform: translateX(15px)
+   }
+
+   .div5{
+    position: relative;
+    top: 15px;
+   }
+   .box6{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    
+   }
+   .box10{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+   }
+   .box12{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .box9{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    position: relative;
+    top: 12px;
+    left: 85px;
+   }
+   .box11{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   
+   
+   .box7{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    height: 25px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .box8{
+    background-color: rgb(228, 151, 164);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .div6cont{
+    position: relative;
+    top: 40px;
+    width:570px;
+    border-radius: 10px;
+    background-color: pink;
+    box-shadow:inset 0px 0px 6px rgb(0, 0, 0, 0.2) ;
+   }
+   .div8cont{
+    width: 570px;
+    position: relative;
+    border-radius: 10px;
+    top: 60px;
+    background-color: pink;
+    box-shadow:inset 0px 0px 6px rgb(0, 0, 0, 0.2) ;
+   }
+   .div2{
+    justify-content: center;
+   }
+.toggle-1{
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: rgb(161, 125, 131);
+    box-shadow: inset 3px 3px 6px rgb(0, 0, 0, 0.4);
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.5s;
+
+}
+.toggle-1::before{
+    content: "";
+    background: radial-gradient(#fff, #ccc, #333);
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+
+}
+.toggle-1:checked::before{ 
+    left: 50%;
+
+}
+.toggle-1:checked{
+    background: pink;
+}
+.div4{
+    margin-top: 10px;
+}
+.div2{
+    display: flex;
+}
+.div6{ 
+    display: flex;
+    gap: 10px;
+    color: rgb(119, 75, 82);
+}
+
+.div8{
+    display: flex;
+    gap: 20px;
+    color: rgb(119, 75, 82);
+}
+
+.div9{
+    display: flex;
+    position: relative;
+    bottom: 10px ;
+    justify-content: space-around;
+}
