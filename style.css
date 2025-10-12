@@ -255,3 +255,174 @@
     bottom: 10px ;
     justify-content: space-around;
 }
+@media screen and (max-width:600px){
+    .container{
+        background-color: peru;
+        width: 450px;
+        height: 400px;
+    }
+    .box2{
+    width: 70px;
+    height: 16px;
+    border-radius: 5px;
+    border-color: none;
+   }
+   .box3{
+    width: 75px;
+    height: 18px;
+    border-radius: 5px;
+    border-color: 0;
+
+   }
+   .box1{
+    background-color: peru;
+    border: none;
+    height: 20px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+    
+   }
+   .box4{
+    background-color: peru;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .box5{
+    background-color: peru;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   
+   }
+   .box6{
+    background-color: peru;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    
+   }
+   .box7{
+    background-color: peru;
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .box8{
+    background-color: peru;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .div5{
+    position: relative;
+    left: 50px;
+   }
+    .div6cont{
+    position: relative;
+    top: 30px;
+    width:380px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: peru;
+    box-shadow:inset 0px 0px 6px rgb(0, 0, 0, 0.2) ;
+   }
+   .box9{
+    background-color: peru;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 80px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    position: relative;
+    right: 100px;
+   }
+   .box10{
+    background-color:peru;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 80px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+    position: relative;
+    
+   }
+   .div6{ 
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    color:rgb(56, 36, 17);
+}
+.box9::placeholder{
+    color: white;
+    justify-self: center;
+   }
+.box10::placeholder{
+    color: white;
+    position: relative;
+    right: 60px;}
+.div8cont{
+    width: 380px;
+    height: 50px;
+    position: relative;
+    border-radius: 10px;
+    top: 40px;
+    background-color: peru;
+    box-shadow:inset 0px 0px 6px rgb(0, 0, 0, 0.2) ;
+   }
+   .box11{
+    background-color: peru;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    height: 17px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);
+   }
+   .box12{
+    background-color: peru;
+    border: none;
+    align-items: center;
+    border-radius: 5px;
+    width: 100px;
+    height: 17px;
+    box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2);}
+   .div8{
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    color: rgb(56, 36, 17);
+}
+.div9{
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    justify-content: space-around;
+}
+.todo{
+    color: rgb(56, 36, 17);
+}
+.toggle-1:checked{
+    background-color: rgb(56, 36, 17);
+}
+.toggle-1{
+    appearance: none;
+    width: 50px;
+    height: 25px;
+    background-color: peru;
+    box-shadow: inset 3px 3px 6px rgb(0, 0, 0, 0.4);
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.5s;}
+    .box1::placeholder{
+        color:rgb(56, 36, 17) ;
+    }
+    .box4::placeholder{
+        color:rgb(56, 36, 17) ;
+    }
+}
