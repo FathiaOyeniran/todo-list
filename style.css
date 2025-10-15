@@ -222,6 +222,7 @@
 .btn{ background-color: rgb(228, 151, 164); border:none; height:30px; border-radius:5px; box-shadow: inset 0px 0px 6px rgb(0, 0, 0, 0.2); padding:0 12px; cursor:pointer; }
 .btn.primary{ font-weight:600; }
 .btn.danger{ background-color:#c65a6a; color:white; }
+.btn.icon{ display:inline-flex; align-items:center; justify-content:center; padding:0 8px; width:32px; }
 .btn.filter[aria-pressed="true"]{ outline:2px solid #7b4250; }
 .filters{ margin-top:12px; display:flex; gap:8px; }
 .task-list{ list-style:none; padding:0; margin-top:16px; display:flex; flex-direction:column; gap:8px; }
@@ -288,9 +289,12 @@
 }
 @media screen and (max-width:600px){
     .container{
-        background-color: peru;
-        width: 450px;
-        height: 400px;
+        background-color: pink; /* keep desktop theme on mobile */
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+        margin-top: 20px;
+        padding: 12px;
     }
     .box2{
     width: 70px;
@@ -403,8 +407,8 @@
     height: 50px;
     position: relative;
     border-radius: 10px;
-    top: 40px;
-    background-color: peru;
+        top: 20px;
+        background-color: pink;
     box-shadow:inset 0px 0px 6px rgb(0, 0, 0, 0.2) ;
    }
    .box11{
@@ -463,4 +467,17 @@
     .task-form .row{ display:flex; flex-direction:column; gap:8px; }
     .task-form .field.small{ width:100%; }
     .actions{ align-items:stretch; }
+    .filters{ display:flex; flex-wrap:wrap; gap:8px; }
+    .task-item{ padding:6px 8px; }
+}
+
+@media screen and (max-width:900px){
+    .container{
+        width: 95%;
+        max-width: 650px;
+        height: auto;
+        margin-top: 40px;
+    }
+    .task-form .row{ gap:10px; }
+    .filters{ flex-wrap:wrap; }
 }
