@@ -2,55 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=">
-    <title>To do list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To‑Do List</title>
     <link rel="stylesheet" href="style.css">
+    <script>try{document.documentElement.classList.toggle('preload-dark', localStorage.getItem('theme:v1')==='dark')}catch(e){}</script>
 </head>
 <body class="body">
     <div class="container">
-        <div class="div1">
-            <h2 class="todo"> TO-DO List</h2>
-        </div>
-        <div class="div2">
-            <input type="checkbox" class="toggle-1"  >
-            <p class="dark">Dark Mode</p>
-            
-        </div>
-        <div class="div3">
-            <input type="textbox" class="box1" placeholder="Enter a task...">
-            <input type="textbox" class="box2" placeholder="dd/mm/yyyy   📅">
-            <input type="textbox" class="box3" placeholder="--:--   --   🕑">
-        </div>
-        <div class="div4">
-            <input type="textbox" class="box4" placeholder="Category (optional)">
-            <input type="textbox" class="box5" placeholder="Add Task">
-            
-        </div>
-        <div class="div5">
-            <input type="textbox" class="box6" placeholder="All Tasks">
-            <input type="textbox" class="box7" placeholder="Pending Tasks">
-            <input type="textbox" class="box8" placeholder="Completed Tasks">
-        </div>
-        <div class="div6cont">
-            <div class="div6"><input type="checkbox" class="checkbox" ><p>Dinner        (Due: 10/23/2025, 6:41:00 PM)       []</p>
-                 <input type="textbox" class="box9" placeholder="Edit" >
-            </div> 
-            <div class="div7">
-                <input type="textbox" class="box10" placeholder="X" >
+        <header class="header">
+            <h1 class="todo">TO‑DO List</h1>
+            <div class="theme-toggle">
+                <input type="checkbox" id="darkToggle" class="toggle-1" aria-label="Toggle dark mode">
+                <label for="darkToggle" class="dark">Dark Mode</label>
             </div>
-        </div>
-        <div class="div8cont">
-            <div class="div8">
-                <input type="checkbox" class="checkbox2" > 
-                    <p>Take Medicine (Due: 10/23/2025, 6:42:00 PM)      []</p>      
-            </div>
-            <div class="div9">
-                <input type="textbox" class="box11" placeholder="Edit" >
-                <input type="textbox" class="box12" placeholder="X" >
-            </div> 
-            
-        </div>
+        </header>
+        <main>
+            <form id="task-form" class="task-form" aria-label="Add a new task">
+                <div class="row">
+                    <div class="field">
+                        <label for="title">Task</label>
+                        <input id="title" name="title" type="text" placeholder="Enter a task..." required>
+                    </div>
+                    <div class="field small">
+                        <label for="dueDate">Due date</label>
+                        <input id="dueDate" name="dueDate" type="date">
+                    </div>
+                    <div class="field small">
+                        <label for="dueTime">Time</label>
+                        <input id="dueTime" name="dueTime" type="time">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field grow">
+                        <label for="category">Category (optional)</label>
+                        <input id="category" name="category" type="text" placeholder="Category (optional)">
+                    </div>
+                    <div class="actions">
+                        <button id="addTask" type="submit" class="btn primary">Add Task</button>
+                    </div>
+                </div>
+            </form>
+            <nav class="filters" aria-label="Task filters">
+                <button type="button" class="btn filter" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="btn filter" data-filter="pending">Pending</button>
+                <button type="button" class="btn filter" data-filter="completed">Completed</button>
+            </nav>
+            <section aria-labelledby="tasks-heading">
+                <h2 id="tasks-heading" class="sr-only">Tasks</h2>
+                <ul id="task-list" role="list" class="task-list"></ul>
+            </section>
+        </main>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
