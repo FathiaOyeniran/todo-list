@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            document.documentElement.classList.toggle('preload-dark', localStorage.getItem('theme:v1') === 'dark');
+        } catch (e) {}
+    </script>
+</head>
+<body class="body">
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="app-title">To-Do List App</h1>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="tasks.html" class="nav-link">Tasks</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="darkToggle" class="toggle-1" aria-label="Toggle dark mode">
+                <label for="darkToggle" class="dark">Dark Mode</label>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="about-section">
+                <h2>About This App</h2>
+                <p>This is a simple, elegant to-do list application built with vanilla HTML, CSS, and JavaScript. It helps you organize your tasks efficiently with features like:</p>
+                
+                <ul class="feature-list">
+                    <li>Add, edit, and delete tasks</li>
+                    <li>Set due dates and times</li>
+                    <li>Organize tasks by categories</li>
+                    <li>Mark tasks as complete</li>
+                    <li>Filter tasks (All, Pending, Completed)</li>
+                    <li>Dark mode support</li>
+                    <li>Data persistence with localStorage</li>
+                    <li>Mobile-responsive design</li>
+                </ul>
+
+                <h3>How to Use</h3>
+                <ol class="usage-list">
+                    <li><strong>Adding Tasks:</strong> Fill in the task title, optional due date/time, and category, then click "Add Task"</li>
+                    <li><strong>Managing Tasks:</strong> Use the checkboxes to mark tasks complete, or click the edit/delete icons to modify tasks</li>
+                    <li><strong>Filtering:</strong> Use the filter buttons to view All, Pending, or Completed tasks</li>
+                    <li><strong>Dark Mode:</strong> Toggle the dark mode switch in the header to change the theme</li>
+                </ol>
+
+                <h3>About the Developer</h3>
+                <p>This application was built as a demonstration of modern web development practices using vanilla JavaScript. It showcases clean code structure, accessibility features, and responsive design principles.</p>
+                
+                <div class="tech-stack">
+                    <h4>Technologies Used:</h4>
+                    <ul>
+                        <li>HTML5 with semantic markup</li>
+                        <li>CSS3 with Flexbox and responsive design</li>
+                        <li>Vanilla JavaScript (ES6+)</li>
+                        <li>localStorage for data persistence</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

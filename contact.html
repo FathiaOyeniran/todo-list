@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            document.documentElement.classList.toggle('preload-dark', localStorage.getItem('theme:v1') === 'dark');
+        } catch (e) {}
+    </script>
+</head>
+<body class="body">
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="app-title">To-Do List App</h1>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="tasks.html" class="nav-link">Tasks</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="darkToggle" class="toggle-1" aria-label="Toggle dark mode">
+                <label for="darkToggle" class="dark">Dark Mode</label>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="contact-section">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Send us a message and we'll respond as soon as possible.</p>
+                
+                <form id="contact-form" class="contact-form" aria-label="Contact form">
+                    <div class="form-group">
+                        <label for="contact-name">Name *</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Email *</label>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-message">Message *</label>
+                        <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-type">Feedback Type</label>
+                        <select id="contact-type" name="type">
+                            <option value="general">General Feedback</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

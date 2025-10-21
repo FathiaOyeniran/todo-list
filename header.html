@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            document.documentElement.classList.toggle('preload-dark', localStorage.getItem('theme:v1') === 'dark');
+        } catch (e) {}
+    </script>
+</head>
+<body class="body">
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="app-title">To-Do List App</h1>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="tasks.html" class="nav-link" data-page="tasks">Tasks</a></li>
+                    <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="darkToggle" class="toggle-1" aria-label="Toggle dark mode">
+                <label for="darkToggle" class="dark">Dark Mode</label>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

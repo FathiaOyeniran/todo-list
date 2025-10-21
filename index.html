@@ -3,56 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To‑Do List</title>
+    <title>Home - To-Do List App</title>
     <link rel="stylesheet" href="style.css">
-    <script>try{document.documentElement.classList.toggle('preload-dark', localStorage.getItem('theme:v1')==='dark')}catch(e){}</script>
+    <script>
+        try {
+            document.documentElement.classList.toggle('preload-dark', localStorage.getItem('theme:v1') === 'dark');
+        } catch (e) {}
+    </script>
 </head>
 <body class="body">
-    <div class="container">
-        <header class="header">
-            <h1 class="todo">TO‑DO List</h1>
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="app-title">To-Do List App</h1>
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="tasks.html" class="nav-link">Tasks</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
             <div class="theme-toggle">
                 <input type="checkbox" id="darkToggle" class="toggle-1" aria-label="Toggle dark mode">
                 <label for="darkToggle" class="dark">Dark Mode</label>
             </div>
-        </header>
-        <main>
-            <form id="task-form" class="task-form" aria-label="Add a new task">
-                <div class="row">
-                    <div class="field">
-                        <label for="title">Task</label>
-                        <input id="title" name="title" type="text" placeholder="Enter a task..." required>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero-section">
+                <h2>Welcome to Your To-Do List App</h2>
+                <p>Organize your tasks efficiently with our simple and elegant to-do list application. Stay productive and never miss a deadline again!</p>
+                
+                <div class="feature-highlights">
+                    <div class="feature-card">
+                        <h3>Easy Task Management</h3>
+                        <p>Add, edit, and delete tasks with just a few clicks. Set due dates and organize by categories.</p>
                     </div>
-                    <div class="field small">
-                        <label for="dueDate">Due date</label>
-                        <input id="dueDate" name="dueDate" type="date">
+                    
+                    <div class="feature-card">
+                        <h3>Smart Filtering</h3>
+                        <p>View all tasks, filter by pending items, or see what you've completed. Stay focused on what matters.</p>
                     </div>
-                    <div class="field small">
-                        <label for="dueTime">Time</label>
-                        <input id="dueTime" name="dueTime" type="time">
+                    
+                    <div class="feature-card">
+                        <h3>Dark Mode</h3>
+                        <p>Switch between light and dark themes for comfortable viewing in any environment.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="field grow">
-                        <label for="category">Category (optional)</label>
-                        <input id="category" name="category" type="text" placeholder="Category (optional)">
-                    </div>
-                    <div class="actions">
-                        <button id="addTask" type="submit" class="btn primary">Add Task</button>
-                    </div>
+                
+                <div class="cta-section">
+                    <h3>Ready to Get Started?</h3>
+                    <p>Start organizing your tasks today!</p>
+                    <a href="tasks.html" class="btn primary large">Go to Tasks</a>
                 </div>
-            </form>
-            <nav class="filters" aria-label="Task filters">
-                <button type="button" class="btn filter" data-filter="all" aria-pressed="true">All</button>
-                <button type="button" class="btn filter" data-filter="pending">Pending</button>
-                <button type="button" class="btn filter" data-filter="completed">Completed</button>
-            </nav>
-            <section aria-labelledby="tasks-heading">
-                <h2 id="tasks-heading" class="sr-only">Tasks</h2>
-                <ul id="task-list" role="list" class="task-list"></ul>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
