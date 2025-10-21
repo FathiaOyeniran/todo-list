@@ -46,6 +46,7 @@ function getDueString(t) {
 
 // Render
 function render() {
+    if (!listEl) return; // Exit if task list doesn't exist (not on tasks page)
     listEl.innerHTML = '';
     const filtered = todos.filter(t => currentFilter === 'all' || (currentFilter === 'pending' ? !t.completed : t.completed));
     for (const t of filtered) {
@@ -147,16 +148,18 @@ if (form) {
 }
 
 // Filters
-for (const btn of filterButtons) {
-    btn.addEventListener('click', () => {
-        currentFilter = btn.dataset.filter;
-        for (const b of filterButtons) b.setAttribute('aria-pressed', String(b === btn));
-        render();
-    });
+if (filterButtons.length > 0) {
+    for (const btn of filterButtons) {
+        btn.addEventListener('click', () => {
+            currentFilter = btn.dataset.filter;
+            for (const b of filterButtons) b.setAttribute('aria-pressed', String(b === btn));
+            render();
+        });
+    }
 }
 
 // Init
 initTheme();
-render();
+if (listEl) render(); // Only render if we're on the tasks page
 
 

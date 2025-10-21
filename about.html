@@ -14,6 +14,11 @@
 <body class="body">
     <header class="main-header">
         <div class="header-container">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
+            </button>
             <h1 class="app-title">To-Do List App</h1>
             <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
@@ -29,6 +34,29 @@
             </div>
         </div>
     </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Menu</h2>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">&times;</button>
+        </div>
+        <nav class="sidebar-nav" role="navigation" aria-label="Sidebar navigation">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="tasks.html" class="nav-link">Tasks</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-theme">
+            <div class="theme-toggle">
+                <input type="checkbox" id="sidebarDarkToggle" class="toggle-1" aria-label="Toggle dark mode">
+                <label for="sidebarDarkToggle" class="dark">Dark Mode</label>
+            </div>
+        </div>
+    </aside>
 
     <main class="main-content">
         <div class="container">
@@ -72,5 +100,6 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 </html>
